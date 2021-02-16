@@ -1,0 +1,29 @@
+{
+  "name": "activity-monitor",
+  "version": "1.0.0",
+  "description": "CPU activity monitor",
+  "repository": "electron/simple-samples",
+  "main": "app.js",
+  "scripts": {
+    "start": "electron app.js",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^11.2.3",
+    "electron-builder": "^22.10.4"
+  },
+  "dependencies": {
+    "@gnaudio/jabra-node-sdk": "^3.2.1"
+  },
+  "build": {
+    "mac": {
+      "target": [
+        { "target": "dmg", "arch": "universal" },
+        { "target": "zip", "arch": "universal" },
+        { "target": "mas", "arch": "universal" }
+      ]
+    }
+  }
+}
